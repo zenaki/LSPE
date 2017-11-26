@@ -15,12 +15,17 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     login.cpp \
-    mysql.cpp
+    mysql.cpp \
+    form_pendaftaran.cpp \
+    simplecrypt.cpp
 
 HEADERS  += mainwindow.h \
     login.h \
     mysql.h \
-    utama.h
+    utama.h \
+    form_pendaftaran.h \
+    simplecrypt.h
 
 FORMS    += mainwindow.ui \
-    login.ui
+    login.ui \
+    form_pendaftaran.ui

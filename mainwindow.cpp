@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent, int user_type) :
+MainWindow::MainWindow(QWidget *parent, int user_id, int user_type) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent, int user_type) :
 
     db = database.connect_db("LSPE_MainWindow");
 
+    id_user = user_id;
     role_id = user_type;
     setMainWindow();
     setTabWindow();
@@ -25,18 +26,14 @@ MainWindow::~MainWindow()
 void MainWindow::setMainWindow()
 {
     if (role_id == 1) {
-        ui->tabWidget->removeTab(4);
-        ui->tabWidget->removeTab(2);
+        ui->pb_sertifikat_addNew->hide();
+        ui->pb_sertifikat_delete->hide();
     } else if (role_id == 2) {
         ui->tabWidget->removeTab(0);
     } else if (role_id == 3) {
-        ui->tabWidget->removeTab(4);
-        ui->tabWidget->removeTab(3);
+        ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(0);
-
     } else {
-        ui->tabWidget->removeTab(4);
-        ui->tabWidget->removeTab(3);
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(1);
         ui->tabWidget->removeTab(0);
@@ -227,4 +224,34 @@ void MainWindow::get_assesor()
     ui->tbl_assesor->setColumnWidth(3, 200);
     ui->tbl_assesor->setColumnWidth(4, 200);
     ui->tbl_assesor->setColumnWidth(5, 200);
+}
+
+void MainWindow::on_pb_admin_addNew_clicked()
+{
+    Form_Pendaftaran *daftar_admin_baru = new Form_Pendaftaran(this, db, 1, id_user, false, 0);
+    daftar_admin_baru->exec();
+
+//    qDebug() << "Selesai Daftar Admin Baru";
+    daftar_admin_baru->deleteLater();
+    setTabWindow();
+}
+
+void MainWindow::on_pb_admin_delete_clicked()
+{
+
+}
+
+void MainWindow::on_pb_assesor_addNew_clicked()
+{
+    Form_Pendaftaran *daftar_assesor_baru = new Form_Pendaftaran(this, db, 2, id_user, false, 0);
+    daftar_assesor_baru->exec();
+
+//    qDebug() << "Selesai Daftar Assesor Baru";
+    daftar_assesor_baru->deleteLater();
+    setTabWindow();
+}
+
+void MainWindow::on_pb_assesor_delete_clicked()
+{
+
 }

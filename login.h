@@ -2,6 +2,8 @@
 #define LOGIN_H
 
 #include <QDialog>
+#include <QMessageBox>
+
 #include "mysql.h"
 
 namespace Ui {
