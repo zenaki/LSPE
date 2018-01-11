@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_admin">
        <attribute name="title">
@@ -26,9 +26,47 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QTableView" name="tbl_admin"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Search by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cb_search_admin">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Keyword</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_search_admin"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_search_admin">
+            <property name="text">
+             <string>Search</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item row="1" column="0">
+         <widget class="QTableView" name="tbl_admin"/>
+        </item>
+        <item row="2" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <spacer name="horizontalSpacer">
@@ -67,9 +105,47 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
         <item row="0" column="0">
-         <widget class="QTableView" name="tbl_sertifikat"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Search by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cb_search_sertifikat">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Keyword</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_search_sertifikat"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_search_sertifikat">
+            <property name="text">
+             <string>Search</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item row="1" column="0">
+         <widget class="QTableView" name="tbl_sertifikat"/>
+        </item>
+        <item row="2" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <spacer name="horizontalSpacer_2">
@@ -102,15 +178,53 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_assesor">
+      <widget class="QWidget" name="tab_assessor">
        <attribute name="title">
-        <string>Daftar Assesor</string>
+        <string>Daftar assessor</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
-         <widget class="QTableView" name="tbl_assesor"/>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Search by</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cb_search_assessor">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Keyword</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_search_assessor"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_search_assessor">
+            <property name="text">
+             <string>Search</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item row="1" column="0">
+         <widget class="QTableView" name="tbl_assessor"/>
+        </item>
+        <item row="2" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <spacer name="horizontalSpacer_3">
@@ -126,14 +240,14 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pb_assesor_addNew">
+           <widget class="QPushButton" name="pb_assessor_addNew">
             <property name="text">
              <string>Add New</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pb_assesor_delete">
+           <widget class="QPushButton" name="pb_assessor_delete">
             <property name="text">
              <string>Delete</string>
             </property>

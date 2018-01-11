@@ -2,6 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
+#include <QCryptographicHash>
 #include <QMessageBox>
 
 #include "mysql.h"

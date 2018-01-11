@@ -14,5 +14,6 @@
 #include <QDateTime>
 
 #define PATH_SETTING_CONNECTION "config.ini"
+#define PATH_FILE               "File"
 
 #endif // UTAMA_H

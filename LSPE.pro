@@ -17,15 +17,23 @@ SOURCES += main.cpp\
     login.cpp \
     mysql.cpp \
     form_pendaftaran.cpp \
-    simplecrypt.cpp
+#    simplecrypt.cpp \
+    form_peserta.cpp
 
 HEADERS  += mainwindow.h \
     login.h \
     mysql.h \
     utama.h \
     form_pendaftaran.h \
-    simplecrypt.h
+#    simplecrypt.h \
+    form_peserta.h
 
 FORMS    += mainwindow.ui \
     login.ui \
-    form_pendaftaran.ui
+    form_pendaftaran.ui \
+    form_peserta.ui
+
+INCLUDEPATH += ../qpdflib
+
+unix:LIBS += -L$$OUT_PWD/../LSPE/lib
+unix:LIBS += -lqpdf

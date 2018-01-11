@@ -91,6 +91,7 @@ void mysql::write(QSqlDatabase db, QString query)
 //            while(q.next()) {
 //                 result.append(q.value(0).toString());
 //            }
+//            qDebug() << "Success query: \n" << query;
         } else {
             qDebug() << "Cannot write to database with query: \n" << query;
 //            qDebug() << "Cannot write to database";

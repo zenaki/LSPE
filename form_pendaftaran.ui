@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>677</height>
+    <width>900</width>
+    <height>531</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>500</width>
+    <width>900</width>
     <height>0</height>
    </size>
   </property>
@@ -27,7 +27,7 @@
      </property>
      <widget class="QWidget" name="_pendaftaran_admin">
       <attribute name="title">
-       <string>Pendaftaran Admin</string>
+       <string>Administrator</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0">
@@ -76,6 +76,9 @@
            </property>
           </widget>
          </item>
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="le_admin_fullName"/>
+         </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_3">
            <property name="text">
@@ -93,8 +96,8 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
-          <widget class="QLineEdit" name="le_admin_fullName"/>
+         <item row="3" column="2">
+          <widget class="QLineEdit" name="le_admin_identNumber"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="label_4">
@@ -113,15 +116,15 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="2">
-          <widget class="QLineEdit" name="le_admin_identNumber"/>
-         </item>
          <item row="4" column="0">
           <widget class="QLabel" name="label_5">
            <property name="text">
             <string>Birth Place</string>
            </property>
           </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLineEdit" name="le_admin_birthPlace"/>
          </item>
          <item row="4" column="1">
           <widget class="QLabel" name="label_15">
@@ -133,8 +136,12 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="2">
-          <widget class="QLineEdit" name="le_admin_birthPlace"/>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_75">
+           <property name="text">
+            <string>Gender</string>
+           </property>
+          </widget>
          </item>
          <item row="5" column="0">
           <widget class="QLabel" name="label_6">
@@ -153,14 +160,14 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
+         <item row="7" column="0">
           <widget class="QLabel" name="label_7">
            <property name="text">
             <string>Home Address</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
+         <item row="7" column="1">
           <widget class="QLabel" name="label_17">
            <property name="text">
             <string>:</string>
@@ -170,14 +177,17 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="0">
+         <item row="8" column="2">
+          <widget class="QLineEdit" name="le_admin_homePhone"/>
+         </item>
+         <item row="8" column="0">
           <widget class="QLabel" name="label_8">
            <property name="text">
             <string>Home Phone Number</string>
            </property>
           </widget>
          </item>
-         <item row="7" column="1">
+         <item row="8" column="1">
           <widget class="QLabel" name="label_18">
            <property name="text">
             <string>:</string>
@@ -187,17 +197,14 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="2">
-          <widget class="QLineEdit" name="le_admin_homePhone"/>
-         </item>
-         <item row="8" column="0">
+         <item row="9" column="0">
           <widget class="QLabel" name="label_9">
            <property name="text">
             <string>Office Address</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
+         <item row="9" column="1">
           <widget class="QLabel" name="label_19">
            <property name="text">
             <string>:</string>
@@ -207,14 +214,20 @@
            </property>
           </widget>
          </item>
-         <item row="9" column="0">
+         <item row="10" column="2">
+          <widget class="QLineEdit" name="le_admin_officePhone"/>
+         </item>
+         <item row="10" column="0">
           <widget class="QLabel" name="label_10">
            <property name="text">
             <string>Office Phone Number</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="1">
+         <item row="7" column="2">
+          <widget class="QTextEdit" name="te_admin_homeAddress"/>
+         </item>
+         <item row="10" column="1">
           <widget class="QLabel" name="label_20">
            <property name="text">
             <string>:</string>
@@ -225,12 +238,6 @@
           </widget>
          </item>
          <item row="9" column="2">
-          <widget class="QLineEdit" name="le_admin_officePhone"/>
-         </item>
-         <item row="6" column="2">
-          <widget class="QTextEdit" name="te_admin_homeAddress"/>
-         </item>
-         <item row="8" column="2">
           <widget class="QTextEdit" name="te_admin_officeAddress"/>
          </item>
          <item row="5" column="2">
@@ -246,6 +253,44 @@
             </date>
            </property>
           </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QComboBox" name="cb_admin_gender">
+           <item>
+            <property name="text">
+             <string>Male</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Female</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLabel" name="label_76">
+           <property name="text">
+            <string>:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0">
+          <widget class="QLabel" name="label_77">
+           <property name="text">
+            <string>Email Address</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="1">
+          <widget class="QLabel" name="label_78">
+           <property name="text">
+            <string>:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="2">
+          <widget class="QLineEdit" name="le_admin_emailAddress"/>
          </item>
         </layout>
        </item>
@@ -295,65 +340,34 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab_pendaftaran_assesor">
+     <widget class="QWidget" name="tab_pendaftaran_assessor">
       <attribute name="title">
-       <string>Pendaftaran Assesor</string>
+       <string>assessor</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_21">
-           <property name="text">
-            <string>Username</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
+         <item row="4" column="1">
           <widget class="QLabel" name="label_22">
            <property name="text">
             <string>:</string>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
           </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLineEdit" name="le_assessor_homePhone"/>
          </item>
          <item row="0" column="2">
-          <widget class="QLineEdit" name="le_assesor_username"/>
+          <widget class="QLineEdit" name="le_assessor_fullName"/>
          </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_23">
-           <property name="text">
-            <string>password</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="label_24">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QLineEdit" name="le_assesor_password">
-           <property name="echoMode">
-            <enum>QLineEdit::Password</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
+         <item row="0" column="0">
           <widget class="QLabel" name="label_25">
            <property name="text">
             <string>Full Name</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1">
+         <item row="0" column="1">
           <widget class="QLabel" name="label_26">
            <property name="text">
             <string>:</string>
@@ -363,17 +377,17 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
-          <widget class="QLineEdit" name="le_assesor_fullName"/>
+         <item row="1" column="2">
+          <widget class="QLineEdit" name="le_assessor_identNumber"/>
          </item>
-         <item row="3" column="0">
+         <item row="1" column="0">
           <widget class="QLabel" name="label_27">
            <property name="text">
             <string>Identification Number</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
+         <item row="1" column="1">
           <widget class="QLabel" name="label_28">
            <property name="text">
             <string>:</string>
@@ -383,17 +397,17 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="2">
-          <widget class="QLineEdit" name="le_assesor_identNumber"/>
-         </item>
-         <item row="4" column="0">
+         <item row="2" column="0">
           <widget class="QLabel" name="label_29">
            <property name="text">
             <string>Birth Place</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="1">
+         <item row="2" column="2">
+          <widget class="QLineEdit" name="le_assessor_birthPlace"/>
+         </item>
+         <item row="2" column="1">
           <widget class="QLabel" name="label_30">
            <property name="text">
             <string>:</string>
@@ -403,17 +417,14 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="2">
-          <widget class="QLineEdit" name="le_assesor_birthPlace"/>
-         </item>
-         <item row="5" column="0">
+         <item row="3" column="0">
           <widget class="QLabel" name="label_31">
            <property name="text">
             <string>Birth Date</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
+         <item row="3" column="1">
           <widget class="QLabel" name="label_32">
            <property name="text">
             <string>:</string>
@@ -424,13 +435,20 @@
           </widget>
          </item>
          <item row="6" column="0">
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string>Home Phone Number</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
           <widget class="QLabel" name="label_33">
            <property name="text">
             <string>Home Address</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="1">
+         <item row="5" column="1">
           <widget class="QLabel" name="label_34">
            <property name="text">
             <string>:</string>
@@ -440,14 +458,7 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="label_35">
-           <property name="text">
-            <string>Home Phone Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
+         <item row="6" column="1">
           <widget class="QLabel" name="label_36">
            <property name="text">
             <string>:</string>
@@ -457,17 +468,14 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="2">
-          <widget class="QLineEdit" name="le_assesor_homePhone"/>
-         </item>
-         <item row="8" column="0">
+         <item row="7" column="0">
           <widget class="QLabel" name="label_37">
            <property name="text">
             <string>Office Address</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
+         <item row="7" column="1">
           <widget class="QLabel" name="label_38">
            <property name="text">
             <string>:</string>
@@ -477,14 +485,20 @@
            </property>
           </widget>
          </item>
-         <item row="9" column="0">
+         <item row="8" column="2">
+          <widget class="QLineEdit" name="le_assessor_officePhone"/>
+         </item>
+         <item row="8" column="0">
           <widget class="QLabel" name="label_39">
            <property name="text">
             <string>Office Phone Number</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="1">
+         <item row="5" column="2">
+          <widget class="QTextEdit" name="te_assessor_homeAddress"/>
+         </item>
+         <item row="8" column="1">
           <widget class="QLabel" name="label_40">
            <property name="text">
             <string>:</string>
@@ -494,17 +508,11 @@
            </property>
           </widget>
          </item>
-         <item row="9" column="2">
-          <widget class="QLineEdit" name="le_assesor_officePhone"/>
+         <item row="7" column="2">
+          <widget class="QTextEdit" name="te_assessor_officeAddress"/>
          </item>
-         <item row="6" column="2">
-          <widget class="QTextEdit" name="te_assesor_homeAddress"/>
-         </item>
-         <item row="8" column="2">
-          <widget class="QTextEdit" name="te_assesor_officeAddress"/>
-         </item>
-         <item row="5" column="2">
-          <widget class="QDateEdit" name="de_assesor_birthDate">
+         <item row="3" column="2">
+          <widget class="QDateEdit" name="de_assessor_birthDate">
            <property name="displayFormat">
             <string>dd - MM - yyyy</string>
            </property>
@@ -516,6 +524,44 @@
             </date>
            </property>
           </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QComboBox" name="cb_assessor_gender">
+           <item>
+            <property name="text">
+             <string>Male</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Female</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>Gender</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="text">
+            <string>Email Address</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="2">
+          <widget class="QLineEdit" name="le_assessor_emailAddress"/>
          </item>
         </layout>
        </item>
@@ -548,14 +594,14 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pb_assesor_ok">
+          <widget class="QPushButton" name="pb_assessor_ok">
            <property name="text">
             <string>OK</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pb_assesor_cancel">
+          <widget class="QPushButton" name="pb_assessor_cancel">
            <property name="text">
             <string>Cancel</string>
            </property>
@@ -567,395 +613,545 @@
      </widget>
      <widget class="QWidget" name="tab_pendaftaran_sertifikat">
       <attribute name="title">
-       <string>Pendaftaran Sertifikat</string>
+       <string>Peserta Sertifikasi</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_7">
+      <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_6">
-         <item row="13" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_kbjiNumber"/>
-         </item>
-         <item row="10" column="1">
-          <widget class="QLabel" name="label_63">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="2">
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QLineEdit" name="le_sertifikat_certFile"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pb_sertifikat_findCert">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_45">
              <property name="text">
-              <string>Browse</string>
+              <string>Full Name</string>
              </property>
             </widget>
            </item>
-          </layout>
-         </item>
-         <item row="9" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_rfid"/>
-         </item>
-         <item row="13" column="1">
-          <widget class="QLabel" name="label_67">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="0">
-          <widget class="QLabel" name="label_66">
-           <property name="text">
-            <string>KBJI Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="1">
-          <widget class="QLabel" name="label_64">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QLabel" name="label_42">
-           <property name="text">
-            <string>Certification Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
-          <widget class="QLabel" name="label_43">
-           <property name="text">
-            <string>Certification File</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="1">
-          <widget class="QLabel" name="label_61">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="1">
-          <widget class="QLabel" name="label_65">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="1">
-          <widget class="QLabel" name="label_69">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_certNumber"/>
-         </item>
-         <item row="14" column="0">
-          <widget class="QLabel" name="label_68">
-           <property name="text">
-            <string>Competence</string>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="0">
-          <widget class="QLabel" name="label_72">
-           <property name="text">
-            <string>End Date</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="1">
-          <widget class="QLabel" name="label_71">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="2">
-          <widget class="QComboBox" name="cb_sertifikat_competence"/>
-         </item>
-         <item row="12" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_registrationNumber"/>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="label_41">
-           <property name="text">
-            <string>RFID</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_45">
-           <property name="text">
-            <string>Full Name</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="label_46">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_fullName"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_47">
-           <property name="text">
-            <string>Identification Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_identNumber"/>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="label_48">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_49">
-           <property name="text">
-            <string>Birth Place</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_birthPlace"/>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLabel" name="label_50">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_51">
-           <property name="text">
-            <string>Birth Date</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLabel" name="label_52">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_53">
-           <property name="text">
-            <string>Home Address</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QLabel" name="label_54">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_homePhone"/>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_55">
-           <property name="text">
-            <string>Home Phone Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QLabel" name="label_56">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="label_57">
-           <property name="text">
-            <string>Office Address</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
-          <widget class="QLabel" name="label_58">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="label_59">
-           <property name="text">
-            <string>Office Phone Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="2">
-          <widget class="QLineEdit" name="le_sertifikat_officeNumber"/>
-         </item>
-         <item row="8" column="1">
-          <widget class="QLabel" name="label_60">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="0">
-          <widget class="QLabel" name="label_44">
-           <property name="text">
-            <string>Registration Number</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="0">
-          <widget class="QLabel" name="label_70">
-           <property name="text">
-            <string>Start Date</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="2">
-          <widget class="QDateEdit" name="de_sertifikat_startDate"/>
-         </item>
-         <item row="16" column="1">
-          <widget class="QLabel" name="label_73">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="2">
-          <widget class="QDateEdit" name="de_sertifikat_endDate"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_74">
-           <property name="text">
-            <string>Photo File</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="label_62">
-           <property name="text">
-            <string>:</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
-           <item>
-            <widget class="QLineEdit" name="le_sertifikat_photoFile"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pb_sertifikat_findPhoto">
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_46">
              <property name="text">
-              <string>Browse</string>
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
+           <item row="0" column="2">
+            <widget class="QLineEdit" name="le_sertifikat_fullName"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_74">
+             <property name="text">
+              <string>Photo File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="label_62">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLineEdit" name="le_sertifikat_photoFile">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pb_sertifikat_findPhoto">
+               <property name="text">
+                <string>Browse</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="le_sertifikat_identNumber"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_47">
+             <property name="text">
+              <string>Identification Number</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLabel" name="label_48">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLineEdit" name="le_sertifikat_birthPlace"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_49">
+             <property name="text">
+              <string>Birth Place</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="label_50">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_51">
+             <property name="text">
+              <string>Birth Date</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QDateEdit" name="de_sertifikat_birthDate">
+             <property name="displayFormat">
+              <string>dd - MM - yyyy</string>
+             </property>
+             <property name="date">
+              <date>
+               <year>1900</year>
+               <month>1</month>
+               <day>1</day>
+              </date>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="label_52">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QTextEdit" name="te_sertifikat_homeAddress"/>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_53">
+             <property name="text">
+              <string>Home Address</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLabel" name="label_54">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QLineEdit" name="le_sertifikat_homePhone"/>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_55">
+             <property name="text">
+              <string>Home Phone Number</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLabel" name="label_56">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_57">
+             <property name="text">
+              <string>Office Address</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QLabel" name="label_58">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QTextEdit" name="te_sertifikat_officeAddress"/>
+           </item>
+           <item row="9" column="2">
+            <widget class="QLineEdit" name="le_sertifikat_officePhone"/>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_59">
+             <property name="text">
+              <string>Office Phone Number</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QLabel" name="label_60">
+             <property name="text">
+              <string>:</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_79">
+             <property name="text">
+              <string>Gender</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QComboBox" name="cb_sertifikat_gender">
+             <item>
+              <property name="text">
+               <string>Male</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Female</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="label_80">
+             <property name="text">
+              <string>:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_81">
+             <property name="text">
+              <string>Email Address</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QLabel" name="label_82">
+             <property name="text">
+              <string>:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QLineEdit" name="le_sertifikat_emailAddress"/>
+           </item>
           </layout>
          </item>
-         <item row="5" column="2">
-          <widget class="QTextEdit" name="te_sertifikat_homeAddress"/>
-         </item>
-         <item row="7" column="2">
-          <widget class="QTextEdit" name="te_sertifikat_officeAddress"/>
-         </item>
-         <item row="4" column="2">
-          <widget class="QDateEdit" name="de_sertifikat_birthDate">
-           <property name="displayFormat">
-            <string>dd - MM - yyyy</string>
-           </property>
-           <property name="date">
-            <date>
-             <year>1900</year>
-             <month>1</month>
-             <day>1</day>
-            </date>
-           </property>
-          </widget>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="7" column="1">
+              <widget class="QLabel" name="label_73">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="2">
+              <widget class="QDateEdit" name="de_sertifikat_endDate">
+               <property name="displayFormat">
+                <string>dd - MM - yyyy</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="2">
+              <widget class="QComboBox" name="cb_sertifikat_assessor"/>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="label_83">
+               <property name="text">
+                <string>Assessor</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QLabel" name="label_84">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="label_64">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="label_65">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_41">
+               <property name="text">
+                <string>RFID</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="label_61">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLineEdit" name="le_sertifikat_rfid"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_42">
+               <property name="text">
+                <string>Certification Number</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="label_63">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLineEdit" name="le_sertifikat_certNumber"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_43">
+               <property name="text">
+                <string>Certification File</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <widget class="QLineEdit" name="le_sertifikat_certFile">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pb_sertifikat_findCert">
+                 <property name="text">
+                  <string>Browse</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_44">
+               <property name="text">
+                <string>Registration Number</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLineEdit" name="le_sertifikat_registrationNumber"/>
+             </item>
+             <item row="4" column="2">
+              <widget class="QLineEdit" name="le_sertifikat_kbjiNumber"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_66">
+               <property name="text">
+                <string>Blanko Number</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="label_67">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_68">
+               <property name="text">
+                <string>Competence</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="label_69">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QDateEdit" name="de_sertifikat_startDate">
+               <property name="displayFormat">
+                <string>dd - MM - yyyy</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_70">
+               <property name="text">
+                <string>Start Date</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLabel" name="label_71">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label_72">
+               <property name="text">
+                <string>End Date</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="label_85">
+               <property name="text">
+                <string>Assessment Place</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QLabel" name="label_86">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="label_87">
+               <property name="text">
+                <string>Assessment Date</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="2">
+              <widget class="QDateEdit" name="de_sertifikat_assessmentDate">
+               <property name="displayFormat">
+                <string>dd - MM - yyyy</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="QLabel" name="label_88">
+               <property name="text">
+                <string>:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="2">
+              <widget class="QTextEdit" name="te_sertifikat_assessmentPlace"/>
+             </item>
+             <item row="5" column="2">
+              <widget class="QLineEdit" name="le_sertifikat_competence"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>4</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
        <item row="1" column="0">
-        <spacer name="verticalSpacer_3">
+        <spacer name="verticalSpacer_4">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>4</height>
+           <height>16</height>
           </size>
          </property>
         </spacer>
@@ -997,6 +1193,61 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>le_admin_username</tabstop>
+  <tabstop>le_admin_password</tabstop>
+  <tabstop>le_admin_fullName</tabstop>
+  <tabstop>le_admin_identNumber</tabstop>
+  <tabstop>le_admin_birthPlace</tabstop>
+  <tabstop>de_admin_birthDate</tabstop>
+  <tabstop>cb_admin_gender</tabstop>
+  <tabstop>te_admin_homeAddress</tabstop>
+  <tabstop>le_admin_homePhone</tabstop>
+  <tabstop>te_admin_officeAddress</tabstop>
+  <tabstop>le_admin_officePhone</tabstop>
+  <tabstop>le_admin_emailAddress</tabstop>
+  <tabstop>pb_admin_ok</tabstop>
+  <tabstop>pb_admin_cancel</tabstop>
+  <tabstop>le_assessor_fullName</tabstop>
+  <tabstop>le_assessor_identNumber</tabstop>
+  <tabstop>le_assessor_birthPlace</tabstop>
+  <tabstop>de_assessor_birthDate</tabstop>
+  <tabstop>cb_assessor_gender</tabstop>
+  <tabstop>te_assessor_homeAddress</tabstop>
+  <tabstop>le_assessor_homePhone</tabstop>
+  <tabstop>te_assessor_officeAddress</tabstop>
+  <tabstop>le_assessor_officePhone</tabstop>
+  <tabstop>le_assessor_emailAddress</tabstop>
+  <tabstop>pb_assessor_ok</tabstop>
+  <tabstop>pb_assessor_cancel</tabstop>
+  <tabstop>le_sertifikat_fullName</tabstop>
+  <tabstop>pb_sertifikat_findPhoto</tabstop>
+  <tabstop>le_sertifikat_identNumber</tabstop>
+  <tabstop>le_sertifikat_birthPlace</tabstop>
+  <tabstop>de_sertifikat_birthDate</tabstop>
+  <tabstop>cb_sertifikat_gender</tabstop>
+  <tabstop>te_sertifikat_homeAddress</tabstop>
+  <tabstop>le_sertifikat_homePhone</tabstop>
+  <tabstop>te_sertifikat_officeAddress</tabstop>
+  <tabstop>le_sertifikat_officePhone</tabstop>
+  <tabstop>le_sertifikat_emailAddress</tabstop>
+  <tabstop>le_sertifikat_rfid</tabstop>
+  <tabstop>le_sertifikat_certNumber</tabstop>
+  <tabstop>pb_sertifikat_findCert</tabstop>
+  <tabstop>le_sertifikat_registrationNumber</tabstop>
+  <tabstop>le_sertifikat_kbjiNumber</tabstop>
+  <tabstop>le_sertifikat_competence</tabstop>
+  <tabstop>de_sertifikat_startDate</tabstop>
+  <tabstop>de_sertifikat_endDate</tabstop>
+  <tabstop>cb_sertifikat_assessor</tabstop>
+  <tabstop>te_sertifikat_assessmentPlace</tabstop>
+  <tabstop>de_sertifikat_assessmentDate</tabstop>
+  <tabstop>pb_sertifikat_ok</tabstop>
+  <tabstop>pb_sertifikat_cancel</tabstop>
+  <tabstop>le_sertifikat_photoFile</tabstop>
+  <tabstop>le_sertifikat_certFile</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
