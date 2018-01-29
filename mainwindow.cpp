@@ -649,3 +649,17 @@ void MainWindow::delete_sertifikat(int id)
     database.write(db, "delete from certification where id = " + QString::number(id));
     setTabWindow();
 }
+
+void MainWindow::on_pb_admin_export_clicked()
+{
+
+}
+
+void MainWindow::on_pb_admin_import_clicked()
+{
+    ProgressDialog *pd = new ProgressDialog(this);
+    pd->exec();
+
+    qDebug() << "Selesai Import";
+    pd->deleteLater();
+}

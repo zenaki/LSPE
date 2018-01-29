@@ -10,6 +10,7 @@
 #include "mysql.h"
 #include "form_pendaftaran.h"
 #include "form_peserta.h"
+#include "progressdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -48,6 +49,10 @@ private slots:
     void on_tbl_admin_clicked(const QModelIndex &index);
     void on_tbl_sertifikat_clicked(const QModelIndex &index);
     void on_tbl_assessor_clicked(const QModelIndex &index);
+
+    void on_pb_admin_export_clicked();
+
+    void on_pb_admin_import_clicked();
 
 private:
     Ui::MainWindow *ui;

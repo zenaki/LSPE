@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     mysql.cpp \
     form_pendaftaran.cpp \
 #    simplecrypt.cpp \
-    form_peserta.cpp
+    form_peserta.cpp \
+    progressdialog.cpp
 
 HEADERS  += mainwindow.h \
     login.h \
@@ -26,12 +27,14 @@ HEADERS  += mainwindow.h \
     utama.h \
     form_pendaftaran.h \
 #    simplecrypt.h \
-    form_peserta.h
+    form_peserta.h \
+    progressdialog.h
 
 FORMS    += mainwindow.ui \
     login.ui \
     form_pendaftaran.ui \
-    form_peserta.ui
+    form_peserta.ui \
+    progressdialog.ui
 
 INCLUDEPATH += ../qpdflib
 
