@@ -54,6 +54,10 @@ private slots:
 
     void on_pb_admin_import_clicked();
 
+    void on_pb_sertifikat_export_clicked();
+
+    void on_pb_sertifikat_import_clicked();
+
 private:
     Ui::MainWindow *ui;
 

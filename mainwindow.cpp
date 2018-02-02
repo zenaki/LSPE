@@ -652,14 +652,54 @@ void MainWindow::delete_sertifikat(int id)
 
 void MainWindow::on_pb_admin_export_clicked()
 {
+    ProgressDialog *pd = new ProgressDialog(this, db, id_user);
+    pd->show();
+    QString path = QFileDialog::getSaveFileName(this, tr("Save File"), QDir::currentPath(), "CSV Files (*.csv)");
+    pd->setWindowTitle("Exporting to CSV");
+    pd->Export(path);
+    pd->close();
 
+//    qDebug() << "Selesai Export";
+    pd->deleteLater();
 }
 
 void MainWindow::on_pb_admin_import_clicked()
 {
-    ProgressDialog *pd = new ProgressDialog(this);
-    pd->exec();
+    ProgressDialog *pd = new ProgressDialog(this, db, id_user);
+    pd->show();
+    QString path = QFileDialog::getOpenFileName(this, "Open File", QDir::currentPath(), "CSV Files (*.csv)");
+    pd->setWindowTitle("Importing from CSV");
+    pd->Import(path);
+    pd->close();
 
-    qDebug() << "Selesai Import";
+//    qDebug() << "Selesai Import";
     pd->deleteLater();
+    setTabWindow();
+}
+
+void MainWindow::on_pb_sertifikat_export_clicked()
+{
+    ProgressDialog *pd = new ProgressDialog(this, db, id_user);
+    pd->show();
+    QString path = QFileDialog::getSaveFileName(this, tr("Save File"), QDir::currentPath(), "CSV Files (*.csv)");
+    pd->setWindowTitle("Exporting to CSV");
+    pd->Export(path);
+    pd->close();
+
+//    qDebug() << "Selesai Export";
+    pd->deleteLater();
+}
+
+void MainWindow::on_pb_sertifikat_import_clicked()
+{
+    ProgressDialog *pd = new ProgressDialog(this, db, id_user);
+    pd->show();
+    QString path = QFileDialog::getOpenFileName(this, "Open File", QDir::currentPath(), "CSV Files (*.csv)");
+    pd->setWindowTitle("Importing from CSV");
+    pd->Import(path);
+    pd->close();
+
+//    qDebug() << "Selesai Import";
+    pd->deleteLater();
+    setTabWindow();
 }
