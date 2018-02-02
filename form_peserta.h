@@ -2,7 +2,7 @@
 #define FORM_PESERTA_H
 
 #include <QDialog>
-#include "qpdflib/QPdfWidget"
+#include <ActiveQt>
 
 #include "mysql.h"
 #include "form_pendaftaran.h"
@@ -39,7 +39,7 @@ private:
     int user_id;
 
     QAction *m_pOpenFileAction;
-    QPdfWidget *m_pPdfWidget;
+    QAxWidget *pdf;
 
     void setWindow();
 };

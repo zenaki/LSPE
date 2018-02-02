@@ -8,8 +8,12 @@ Form_Peserta::Form_Peserta(QWidget *parent, QSqlDatabase db_parent, int id, int 
     ui->setupUi(this);
     this->setWindowTitle("Detail Sertifikat");
 
-    m_pPdfWidget = new QPdfWidget();
-    ui->splitter->addWidget(m_pPdfWidget);
+    pdf = new QAxWidget(this);
+    if(!pdf->setControl("Adobe PDF Reader"))
+        QMessageBox::critical(this, "Error", "Make sure you have Adobe Reader (and its ActiveX) installed!");
+
+    ui->splitter->addWidget(pdf);
+    ui->splitter->widget(0)->setMaximumWidth(500);
 
     db = db_parent;
     target_id = id;
@@ -83,8 +87,39 @@ void Form_Peserta::setWindow()
     ui->photo->setIconSize(QSize(300,400));
     ui->photo->setResizeMode(QListWidget::Adjust);
     ui->photo->addItem(new QListWidgetItem(QIcon(result.at(10)), result.at(0)));
+//    qDebug() << result.at(10);
     ui->lbl_certificationNumber->setText(result.at(11));
-    m_pPdfWidget->loadFile(result.at(12));
+    pdf->dynamicCall("LoadFile(QString)",result.at(12));
+//    qDebug() << result.at(12);
+
+//    pdf = new QAxWidget(this);
+//    if(!pdf->setControl("Adobe PDF Reader")) {
+//        QMessageBox::critical(this, "Error", "Make sure you have Adobe Reader (and its ActiveX) installed!");
+//    } else {
+//        pdf->dynamicCall("LoadFile(QString)",result.at(12));
+//    }
+
+//    QString pdf = QUrl::toPercentEncoding("file:///"+QDir::currentPath()+"/"+result.at(12));
+//    QString pdf = "file:///"+QDir::currentPath()+"/"+result.at(12);
+//    QString pdf = "file:///"+QDir::currentPath()+"/File/test.html";
+//    QDesktopServices::openUrl(QUrl::fromLocalFile(QDir::currentPath()+"/"+result.at(12)));
+//    webView->setContent(pdf.toUtf8().data(), "application/pdf");
+//    webView->setHtml(pdf); /*webView->show();*/
+
+//        webView->setRenderHint(QPainter::Antialiasing);
+//        webView->setRenderHint(QPainter::TextAntialiasing);
+//        weLbView->setRenderHint(QPainter::SmoothPixmapTransform);
+//        webView->setRenderHint(QPainter::HighQualityAntialiasing);
+
+//        webView->settings()->setAttribute(QWebSettings::DeveloperExtrasEnabled, true);
+//        webView->settings()->setAttribute(QWebSettings::AcceleratedCompositingEnabled, true);
+//        webView->settings()->setAttribute(QWebSettings::LocalContentCanAccessRemoteUrls, true);
+//        webView->settings()->setAttribute(QWebSettings::LocalContentCanAccessFileUrls, true);
+//        webView->settings()->setAttribute(QWebSettings::LocalStorageEnabled, true); // Note: Added as well to allow PDF history to be kept.
+//        webView->settings()->setAttribute(QWebSettings::JavascriptEnabled, true);
+
+//        webView->page()->mainFrame()->load(QUrl(pdf));
+
     ui->lbl_registrationNumber->setText(result.at(13));
     ui->lbl_kbjiNumber->setText(result.at(14));
     ui->lbl_competence->setText(result.at(15));

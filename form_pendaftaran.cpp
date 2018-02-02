@@ -875,15 +875,15 @@ void Form_Pendaftaran::on_pb_sertifikat_ok_clicked()
     if (validationSertifikatForm()) {
         QString update_date = QString::number(QDateTime::currentDateTime().toTime_t());
         if (edit_mode) {
-            QString newPhotoName = "photo_" +
+            QString newPhotoName = QString(PATH_FILE)+"/""photo_" +
                     ui->le_sertifikat_identNumber->text() + "_" +
                     ui->le_sertifikat_fullName->text() + "_" +
-                    ui->le_sertifikat_certNumber->text();
+                    ui->le_sertifikat_certNumber->text() + ".jpg";
             this->save_file(ui->le_sertifikat_photoFile->text(), newPhotoName);
-            QString newCertificateName = "certificate_"+
+            QString newCertificateName = QString(PATH_FILE)+"/""certificate_"+
                     ui->le_sertifikat_identNumber->text() + "_" +
                     ui->le_sertifikat_fullName->text() + "_" +
-                    ui->le_sertifikat_certNumber->text();
+                    ui->le_sertifikat_certNumber->text() + ".pdf";
             this->save_file(ui->le_sertifikat_certFile->text(), newCertificateName);
 
             database.write(db, "update identification                                                                   \
@@ -1478,7 +1478,7 @@ void Form_Pendaftaran::save_file(QString path, QString newName)
         QDir dir;
         dir.mkpath(PATH_FILE);
     }
-    QFile::copy(path, QString(PATH_FILE)+"/"+newName);
+    QFile::copy(path, newName);
     //    QFile::rename(QString(PATH_FILE) + "/" + oldName, QString(PATH_FILE) + "/" + newName);
 }
 

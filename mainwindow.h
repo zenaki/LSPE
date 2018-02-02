@@ -6,6 +6,7 @@
 #include <QSortFilterProxyModel>
 #include <QLineEdit>
 #include <QTableView>
+#include <QtPrintSupport/QPrinter>
 
 #include "mysql.h"
 #include "form_pendaftaran.h"

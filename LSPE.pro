@@ -4,13 +4,12 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql axcontainer
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = LSPE
 TEMPLATE = app
-
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -35,8 +34,3 @@ FORMS    += mainwindow.ui \
     form_pendaftaran.ui \
     form_peserta.ui \
     progressdialog.ui
-
-INCLUDEPATH += ../qpdflib
-
-unix:LIBS += -L$$OUT_PWD/../LSPE/lib
-unix:LIBS += -lqpdf
